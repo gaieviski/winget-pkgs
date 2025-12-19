@@ -2,10 +2,17 @@
 
 PackageIdentifier: LeagueOfSelect.Windows
 PackageVersion: 1.0.0
-InstallerType: nullsoft
 Installers:
-- Architecture: x64
-  InstallerUrl: https://leagueofselect.com/downloads/LeagueOfSelect-Silent-Installer.exe
-  InstallerSha256: 35FADF41A317767AF608599EEDE832D5EE8A3FF9E8A4D43013BA39A4D5B8B3DF
+  - Architecture: x64
+    InstallerType: nsis
+    InstallerUrl: https://leagueofselect.com/downloads/LeagueOfSelect-Silent-Installer.exe
+    InstallerSha256: 35FADF41A317767AF608599EEDE832D5EE8A3FF9E8A4D43013BA39A4D5B8B3DF
+    Scope: machine
+    InstallModes:
+      - silent
+      - interactive
+    InstallerSwitches:
+      Silent: /S
+      SilentWithProgress: /S
 ManifestType: installer
 ManifestVersion: 1.10.0
